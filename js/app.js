@@ -52,13 +52,13 @@ $("#btn-Preview-Image").on('click', function() {
 $("#btn-Convert-Html2Image").on('click', function() {
     let canvas = ($('#myCanvas')[0])
     let imageData = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
-    $("#btn-Convert-Html2Image").attr("download", "your_pic_name.png")
+    $("#btn-Convert-Html2Image").attr("download", "collage.png")
     $("#btn-Convert-Html2Image").attr("href", imageData);
 });
 
 // Declaración de eventos
 const init = () => {
-    let container = document.getElementById("container");
+    let container = document.getElementById("html-content-holder");
     let source = document.getElementById('source');
     let inputFile = document.getElementById('inputFile')
     let deleteCollage = document.getElementById('deleteCollage')

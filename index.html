@@ -21,22 +21,37 @@
     </header>
     <main>
         <!--Sección para agregar las fotos que se seleccionarán para el collage-->
-        <section>
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="inputFile">
-                <label class="custom-file-label" for="inputFile">Agregar foto...</label>
+        <section class="container">
+            <div class="row margin">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputFile">
+                    <label class="custom-file-label" for="inputFile">Agregar foto...</label>
+                </div>
             </div>
-            <article id="source" class="collage">
-
-            </article>
+            <div class="row margin">
+                <div class="col">
+                    <article id="source" class=" col selection pad-t-b">
+                    </article>
+                </div>
+            </div>
         </section>
-        <!--Botón de vista previa-->
-        <button id="btn-Preview-Image" type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">Vista Previa</button>
-        <!--Sección para arrastrar las fotos para el collage-->
-        <section id="html-content-holder">
-            <article id="container" class="collage">
-
-            </article>
+        <section class="container">
+            <div class="row margin">
+                <h4>Crea tu collage</h4>
+            </div>
+            <div class="row margin">
+                <div class="col ">
+                    <!--Sección para arrastrar las fotos para el collage-->
+                    <article id="html-content-holder" class=" col-md-auto collage pad-t-b">
+                    </article>
+                </div>
+            </div>
+            <div class="row margin">
+                <!--Botón de vista previa-->
+                <div class="col offset-8">
+                    <button id="btn-Preview-Image" type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">Vista Previa</button>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="navbar navbar-dark bg-dark ">

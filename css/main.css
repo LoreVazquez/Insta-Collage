@@ -1,8 +1,22 @@
 .collage {
     border: 1px solid black;
-    height: 50vh;
+    height: 35vh;
+}
+
+.selection {
+    border: 1px solid black;
+    height: 22vh;
+    overflow: auto;
 }
 
 .size {
-    width: 30%;
+    width: 33%;
+}
+
+.margin {
+    margin: 10px;
+}
+
+.pad-t-b {
+    padding: 10px;
 }
