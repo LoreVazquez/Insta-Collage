@@ -2,9 +2,8 @@
 
 //Funciones de drag and drop
 const dragInitial = (e) => {
-    e.dataTransfer.setData('text/plain', e.target.id);
+    e.dataTransfer.setData('key', e.target.id);
     e.dataTransfer.dropEffect = 'move';
-    console.log(e.target.id)
 };
 
 const dragOver = (e) => {
@@ -14,18 +13,16 @@ const dragOver = (e) => {
 
 const onDrop = (e) => {
     e.preventDefault();
-    let data = e.dataTransfer.getData('text');
+    let data = e.dataTransfer.getData('key');
     let pic = document.getElementById(data)
     e.target.appendChild(pic);
     pic.removeAttribute('class', 'size');
     pic.setAttribute('class', 'size-collage')
-    console.log(e);
-
 };
 
-const deleteDrop = (e) =>{
+const deleteDrop = (e) => {
     e.preventDefault();
-    let data = e.dataTransfer.getData('text');
+    let data = e.dataTransfer.getData('key');
     let element = document.getElementById(data);
     element.parentNode.removeChild(element);
 };
@@ -39,7 +36,7 @@ const addPicture = (e) => {
     image.setAttribute('src', URL.createObjectURL(file));
     image.setAttribute('id', file.name);
     image.setAttribute('class', 'size');
-    image.setAttribute('draggable', 'draggable' )
+    image.setAttribute('draggable', 'draggable')
     image.setAttribute('crossOrigin', 'Anonymous');
 
     let id = image.id;
@@ -52,21 +49,21 @@ const addPicture = (e) => {
 const selectTemplate = () => {
     let valueSelect = document.getElementById('template').value;
     let container = document.getElementById("html-content-holder");
-    
-    if(valueSelect == 3){
-        let templateThree = '<div class="row">'+
-                            '<div class="col p-frame">'+
-                                '<div class="row">'+
-                                    '<div class="col frame n-pad img-thumbnail"></div>'+
-                                '</div>'+
-                                '<div class="row">'+
-                                    '<div class="col frame n-pad img-thumbnail"></div>'+
-                                '</div>'+
-                            '</div>'+
-                            '<div class="col p-frame n-pad img-thumbnail"></div>'+
-                        '</div>';
+
+    if (valueSelect == 3) {
+        let templateThree = '<div class="row">' +
+            '<div class="col p-frame">' +
+            '<div class="row">' +
+            '<div class="col frame n-pad img-thumbnail"></div>' +
+            '</div>' +
+            '<div class="row">' +
+            '<div class="col frame n-pad img-thumbnail"></div>' +
+            '</div>' +
+            '</div>' +
+            '<div class="col p-frame n-pad img-thumbnail"></div>' +
+            '</div>';
         container.innerHTML = templateThree;
-    } else if( valueSelect == 4){
+    } else if (valueSelect == 4) {
         let templateFour = `<div class="row">
                                 <div class="col p-frame">
                                     <div class="row">
@@ -88,7 +85,7 @@ const selectTemplate = () => {
 
         container.innerHTML = templateFour;
 
-    }else if( valueSelect == 5){
+    } else if (valueSelect == 5) {
         let templateFive = `<div class="row">
                                 <div class="col-4 p-frame">
                                     <div class="row">
@@ -115,7 +112,7 @@ const selectTemplate = () => {
 
         container.innerHTML = templateFive;
 
-    }else if(valueSelect == 6){
+    } else if (valueSelect == 6) {
         let templateSix = `<div class="row">
                                 <div class="col-4 p-frame n-pad img-thumbnail">
                                 </div>
