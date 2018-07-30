@@ -4,6 +4,7 @@
 const dragInitial = (e) => {
     e.dataTransfer.setData('text/plain', e.target.id);
     e.dataTransfer.dropEffect = 'move';
+    console.log(e.target.id)
 };
 
 const dragOver = (e) => {
@@ -18,6 +19,7 @@ const onDrop = (e) => {
     e.target.appendChild(pic);
     pic.removeAttribute('class', 'size');
     pic.setAttribute('class', 'size-collage')
+    console.log(e);
 
 };
 
@@ -37,6 +39,7 @@ const addPicture = (e) => {
     image.setAttribute('src', URL.createObjectURL(file));
     image.setAttribute('id', file.name);
     image.setAttribute('class', 'size');
+    image.setAttribute('draggable', 'draggable' )
     image.setAttribute('crossOrigin', 'Anonymous');
 
     let id = image.id;
