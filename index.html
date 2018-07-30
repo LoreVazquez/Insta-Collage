@@ -35,24 +35,145 @@
                 </div>
             </div>
         </section>
+        <div class="container">
+            <div class="row margin">
+                <div class="col">
+                    <h4>Crea tu collage</h4>
+                </div>
+                <div class="col">
+                    <select id="template" class="custom-select">
+                        <option selected>Selecciona una plantilla</option>
+                        <option value="3">Tres fotos</option>
+                        <option value="4">Cuatro fotos </option>
+                        <option value="5">Cinco fotos</option>
+                        <option value="6">Seis fotos</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tres fotos
         <section class="container">
             <div class="row margin">
-                <h4>Crea tu collage</h4>
-            </div>
-            <div class="row margin">
                 <div class="col ">
-                    <!--Sección para arrastrar las fotos para el collage-->
-                    <article id="html-content-holder" class=" col-md-auto collage pad-t-b">
+                    <article id="html-content-holder" class=" col-md-auto">
+                        <div class="row">
+                            <div class="col p-frame">
+                                <div class="row">
+                                    <div class="col frame n-pad img-thumbnail"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col frame n-pad img-thumbnail"></div>
+                                </div>
+                            </div>
+                            <div class="col p-frame n-pad img-thumbnail"></div>
+                        </div>
                     </article>
                 </div>
             </div>
+        </section>-->
+
+        <!-- Cuatro fotos
+        <section class="container">
             <div class="row margin">
-                <!--Botón de vista previa-->
+                <div class="col ">
+                    <article id="html-content-holder" class=" col-md-auto">
+                        <div class="row">
+                            <div class="col p-frame">
+                                <div class="row">
+                                    <div class="col frame n-pad img-thumbnail"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col frame n-pad img-thumbnail"></div>
+                                </div>
+                            </div>
+                            <div class="col p-frame n-pad img-thumbnail">
+                                <div class="row">
+                                    <div class="col frame n-pad img-thumbnail"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col frame n-pad img-thumbnail"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>-->
+
+        <!-- Cinco fotos
+        <section class="container">
+            <div class="row margin">
+                <div class="col ">
+                    <article id="html-content-holder" class=" col-md-auto">
+                        <div class="row">
+                            <div class="col-4 p-frame">
+                                <div class="row">
+                                    <div class="col frame n-pad img-thumbnail rounded-circle"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col frame n-pad img-thumbnail"></div>
+                                </div>
+                            </div>
+                            <div class="col p-frame n-pad img-thumbnail">
+                                <div class="row">
+                                    <div class="col frame n-pad img-thumbnail"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col frame n-pad">
+                                        <div class="row">
+                                            <div class="col-7 frame n-pad img-thumbnail rounded-right"></div>
+                                            <div class="col frame n-pad img-thumbnail rounded-left"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>-->
+
+
+        <section class="container">
+            <div class="row margin">
+                <div class="col ">
+                    <!--Sección para arrastrar las fotos para el collage-->
+                    <article id="html-content-holder" class=" col-md-auto">
+                        <div class="row">
+                            <div class="col-4 p-frame n-pad img-thumbnail">
+                            </div>
+                            <div class="col p-frame n-pad img-thumbnail">
+                                <div class="row">
+                                    <div class="col frame n-pad img-thumbnail"></div>
+                                    <div class="col frame n-pad img-thumbnail"></div>
+                                    <div class="col frame n-pad img-thumbnail"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col frame n-pad">
+                                        <div class="row">
+                                            <div class="col-7 frame n-pad img-thumbnail"></div>
+                                            <div class="col frame n-pad img-thumbnail"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--Botón de vista previa-->
+        <div class="container">
+            <div class="row margin">
                 <div class="col offset-8">
                     <button id="btn-Preview-Image" type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">Vista Previa</button>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
     <footer class="navbar navbar-dark bg-dark ">
         <p class="text-center text-white">© Copyright 2018</p>

@@ -14,7 +14,11 @@ const dragOver = (e) => {
 const onDrop = (e) => {
     e.preventDefault();
     let data = e.dataTransfer.getData('text');
-    e.target.appendChild(document.getElementById(data));
+    let pic = document.getElementById(data)
+    e.target.appendChild(pic);
+    pic.removeAttribute('class', 'size');
+    pic.setAttribute('class', 'size-collage')
+
 };
 
 //Evento para agregar fotos
@@ -34,6 +38,10 @@ const addPicture = (e) => {
     //Inizializa la función de arrastrar
     newPic.addEventListener('dragstart', dragInitial);
 };
+
+const selectTemplate = () => {
+
+}
 
 const deleteItem = () => {
     let element = document.getElementById('myCanvas');
@@ -60,8 +68,9 @@ $("#btn-Convert-Html2Image").on('click', function() {
 const init = () => {
     let container = document.getElementById("html-content-holder");
     let source = document.getElementById('source');
-    let inputFile = document.getElementById('inputFile')
-    let deleteCollage = document.getElementById('deleteCollage')
+    let inputFile = document.getElementById('inputFile');
+    let deleteCollage = document.getElementById('deleteCollage');
+    let template = document.getElementById('template');
 
     container.addEventListener('dragover', dragOver);
     container.addEventListener('drop', onDrop);
@@ -71,6 +80,7 @@ const init = () => {
 
     inputFile.addEventListener('change', addPicture);
     deleteCollage.addEventListener('click', deleteItem);
+    template.addEventListener('change', selectTemplate)
 };
 
 window.addEventListener('load', init);

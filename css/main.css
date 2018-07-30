@@ -1,10 +1,27 @@
-.collage {
-    border: 1px solid black;
-    height: 35vh;
+.frame {
+    height: 17vh;
+    overflow: hidden;
+}
+
+.margin {
+    margin: 10px;
+}
+
+.n-pad {
+    padding: 0px;
+}
+
+.p-frame {
+    height: 34vh;
+    overflow: hidden;
+}
+
+.pad-t-b {
+    padding: 10px;
 }
 
 .selection {
-    border: 1px solid black;
+    border: 1px solid gray;
     height: 22vh;
     overflow: auto;
 }
@@ -13,10 +30,6 @@
     width: 33%;
 }
 
-.margin {
-    margin: 10px;
-}
-
-.pad-t-b {
-    padding: 10px;
+.size-collage {
+    width: 100%;
 }
