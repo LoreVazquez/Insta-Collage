@@ -51,17 +51,17 @@ const selectTemplate = () => {
     let container = document.getElementById("html-content-holder");
 
     if (valueSelect == 3) {
-        let templateThree = '<div class="row">' +
-            '<div class="col p-frame">' +
-            '<div class="row">' +
-            '<div class="col frame n-pad img-thumbnail"></div>' +
-            '</div>' +
-            '<div class="row">' +
-            '<div class="col frame n-pad img-thumbnail"></div>' +
-            '</div>' +
-            '</div>' +
-            '<div class="col p-frame n-pad img-thumbnail"></div>' +
-            '</div>';
+        let templateThree = `<div class="row">
+                                <div class="col p-frame">
+                                    <div class="row">
+                                        <div class="col frame n-pad img-thumbnail"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col frame n-pad img-thumbnail"></div>
+                                    </div>
+                                </div>
+                                <div class="col p-frame n-pad img-thumbnail"></div>
+                            </div>`;
         container.innerHTML = templateThree;
     } else if (valueSelect == 4) {
         let templateFour = `<div class="row">
