@@ -142,6 +142,12 @@ const deleteItem = () => {
     element.parentNode.removeChild(element);
 };
 
+//Cerrar sesión
+const logOut = (e) => {
+    firebase.auth().signOut();
+    window.location.href = 'index.html';
+};
+
 //Evento para convertir el contenedor del collage en un canvas
 $("#btn-Preview-Image").on('click', function() {
     html2canvas($("#html-content-holder")[0]).then(function(canvas) {
@@ -166,6 +172,7 @@ const init = () => {
     let deleteCollage = document.getElementById('deleteCollage');
     let template = document.getElementById('template');
     let trash = document.getElementById('trash');
+    let btnLogout = document.getElementById("log-out");
 
     container.addEventListener('dragover', dragOver);
     container.addEventListener('drop', onDrop);
@@ -179,6 +186,7 @@ const init = () => {
 
     trash.addEventListener('dragover', dragOver);
     trash.addEventListener('drop', deleteDrop);
+    btnLogout.addEventListener('click', logOut)
 };
 
 window.addEventListener('load', init);
